@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Maillist</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Список отправленных писем</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Тема</th>
+            <th scope="col">Текст псиьма</th>
+            <th scope="col">Адресс почты</th>
+            <th scope="col">Доставлено</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for mail in object_list %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ mail.subject }}</td>
+            <td>{{ mail.text }}</td>
+            <td>{{ mail.mail_adress }}</td>
+            <td>{{ mail.is_send|yesno:"доставлено,недоставлено" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+</body>
+</html>
