@@ -26,7 +26,7 @@
             <td>{{ mail.subject }}</td>
             <td>{{ mail.text }}</td>
             <td>{{ mail.mail_adress }}</td>
-            <td>{{ mail.is_send|yesno:"доставлено,недоставлено" }}</td>
+            <td>{{ mail.is_send|yesno:"доставлено,не доставлено" }}</td>
           </tr>
           {% endfor %}
         </tbody>
