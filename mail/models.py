@@ -10,7 +10,7 @@ from time import sleep
 class Mail(models.Model):
     subject = models.CharField("Тема", max_length=50, db_index=True)
     text = models.TextField("Текст сообщения")
-    mail_adress = models.EmailField("Email адрес")
+    mail_adress = models.EmailField("Введите Email получателя")
     delay = models.SmallIntegerField("Задержка")
     is_send = models.BooleanField(default=False)
 
