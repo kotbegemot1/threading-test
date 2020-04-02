@@ -28,7 +28,7 @@ SECRET_KEY = '8ooh1k(wa5hhel@&9%yt4)r21#78h4k12cx8b6rj4@h5#f8d++'
 DEBUG = os.getenv('DEBUG', False)
 
 
-ALLOWED_HOSTS = ['https://test-threading.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 587
